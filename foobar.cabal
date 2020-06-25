@@ -1,0 +1,38 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 777545eb6cc9eb48cb301bae6bf0fc161d73da6b1320706ec8bbe4721ed7886f
+
+name:           foobar
+version:        0.1.0.0
+description:    description
+homepage:       https://github.com/Sir4ur0n/foobar#readme
+bug-reports:    https://github.com/Sir4ur0n/foobar/issues
+author:         Julien Debon
+maintainer:     julien.debon@pm.me
+copyright:      WTFPL
+license:        BSD3
+build-type:     Simple
+
+source-repository head
+  type: git
+  location: https://github.com/Sir4ur0n/foobar
+
+library
+  exposed-modules:
+      BugHLS
+      Lib
+  other-modules:
+      Paths_foobar
+  hs-source-dirs:
+      src
+  default-extensions: GADTs TemplateHaskell ScopedTypeVariables FlexibleContexts DataKinds PolyKinds TypeOperators
+  ghc-options: -fplugin=Polysemy.Plugin -flate-specialise -fspecialise-aggressively
+  build-depends:
+      base >=4.7 && <5
+    , polysemy
+    , polysemy-plugin
+  default-language: Haskell2010

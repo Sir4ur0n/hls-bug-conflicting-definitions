@@ -1,0 +1,31 @@
+name: foobar
+version: 0.1.0.0
+github: "Sir4ur0n/foobar"
+license: BSD3
+author: "Julien Debon"
+maintainer: "julien.debon@pm.me"
+copyright: "WTFPL"
+
+description: description
+
+default-extensions:
+  - GADTs
+  - TemplateHaskell
+  - ScopedTypeVariables
+  - FlexibleContexts
+  - DataKinds
+  - PolyKinds
+  - TypeOperators
+
+ghc-options:
+  - -fplugin=Polysemy.Plugin
+  - -flate-specialise
+  - -fspecialise-aggressively
+
+dependencies:
+  - base >= 4.7 && < 5
+  - polysemy
+  - polysemy-plugin
+
+library:
+  source-dirs: src
